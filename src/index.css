@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+@theme {
+  --color-acid-lime: #c8ff61;
+  --color-deep-black: #0a0c0d;
+  --color-dark-forest: #0e1613;
+  --color-charcoal: #161a1a;
+  --color-input-gray: #242929;
+  --color-border-gray: #343b38;
+}
+
+@layer components {
+  .form-control {
+    @apply w-full rounded-lg
+           border border-border-gray
+           bg-input-gray py-3 px-2 text-sm text-white
+           outline-none
+           transition-colors duration-200
+           focus:border-acid-lime;
+  }
+}
+
+@layer components {
+  .toast--success {
+    background: #161a1a !important;
+    color: #f2f6f6 !important;
+    border: 1px solid #343b38 !important;
+    border-left: 4px solid #c8ff61 !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+  }
+
+  .toast--success .toast__title {
+    color: #f2f6f6 !important;
+    font-weight: 600;
+  }
+
+  .toast--success svg {
+    color: #c8ff61 !important;
+    stroke: #c8ff61 !important;
+  }
+}
+
+@layer components {
+  .toast--danger {
+    background: #161a1a !important;
+    color: #f2f6f6 !important;
+    border: 1px solid #343b38 !important;
+    border-left: 4px solid #f87171 !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  .toast--danger .toast__title {
+    color: #f2f6f6 !important;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .toast--danger .toast__description {
+    color: #a3ada8 !important;
+    font-size: 12px;
+  }
+
+  .toast--danger svg {
+    color: #f87171 !important;
+    stroke: #f87171 !important;
+  }
+}
